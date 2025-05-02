@@ -1,0 +1,14 @@
+ 1. Swipe to Delete Expense
+Swipe left or right on an expense to delete it.
+
+Uses SwipeToDismiss in Jetpack Compose.
+
+💰 2. when addong a expense i want to have a drop meny for the catergorie insted of writing it .
+
+3. Bar Chart by Category
+Uses AndroidView with MPAndroidChart or a custom Composable bar.
+
+Displays spending by category.
+
+4. i want the monthy budjet to be editable
+
