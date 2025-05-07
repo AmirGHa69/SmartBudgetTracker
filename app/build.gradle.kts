@@ -35,11 +35,10 @@ kapt {
         arg("room.schemaLocation", "$projectDir/schemas")
         arg("room.incremental", "true")
         arg("room.expandProjection", "true")
-        arg("room.skipVerifySchema", "true") // ✅ disables Room's use of native SQLite
-        arg("room.verifySchemaLocation", "false") // 💥 disables native verification
-
+        arg("room.disableVerifyDatabase", "true")
     }
 }
+
 
 
 dependencies {
@@ -65,9 +64,10 @@ dependencies {
     // Activity
     implementation(libs.androidx.activity.compose)
 
-    // Room Database
-    implementation("androidx.room:room-runtime:2.6.1")
-    implementation("androidx.room:room-ktx:2.6.1")
-    kapt("androidx.room:room-compiler:2.6.1")
+    // Room Database (downgraded to 2.5.2 for stability)
+    implementation("androidx.room:room-runtime:2.5.2")
+    implementation("androidx.room:room-ktx:2.5.2")
+    kapt("androidx.room:room-compiler:2.5.2")
+
 }
 
