@@ -1,25 +1,20 @@
 pluginManagement {
     repositories {
-        google {
-            content {
-                includeGroupByRegex("com\\.android.*")
-                includeGroupByRegex("com\\.google.*")
-                includeGroupByRegex("androidx.*")
-            }
-        }
-        mavenCentral()
         gradlePluginPortal()
+        google()
+        mavenCentral()
+        maven(url = "https://jitpack.io") // ✅ Added for MPAndroidChart
     }
 }
+
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         google()
         mavenCentral()
-        maven(url = "https://jitpack.io") // ✅ Only place to put this
+        maven(url = "https://jitpack.io") // ✅ Added for MPAndroidChart
     }
 }
 
 rootProject.name = "SmartBudgetTracker"
 include(":app")
- 
